@@ -13,10 +13,11 @@ container: mcr.microsoft.com/dotnet/core/sdk:3.1
 
 steps:
 - task: DotNetCoreCLI@2
+  displayName: 'Build'
   inputs:
     command: build 
 - task: PublishPipelineArtifact@1
-  displayName: 'my artifact : drop'
+  displayName: 'my artifact : Drop'
   inputs:
     targetPath: '$(Pipeline.Workspace)'
     artifact: 'drop'
