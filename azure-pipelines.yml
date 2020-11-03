@@ -15,3 +15,9 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: build 
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
+
