@@ -16,6 +16,7 @@ steps:
   inputs:
     command: build 
 - task: PublishPipelineArtifact@1
+  displayName: 'my artifact : drop'
   inputs:
     targetPath: '$(Pipeline.Workspace)'
     artifact: 'drop'
