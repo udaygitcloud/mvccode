@@ -1,4 +1,4 @@
-pipeline {
+pipeline {#checking purpose
     agent any 
     stages {        
         stage('---clean---') { 
